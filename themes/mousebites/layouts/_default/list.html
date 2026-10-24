@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ .Content }}
+
+here are the posts
+<br>
+
+<ul>
+{{ range .Pages.ByPublishDate.Reverse }}
+  <li><a href="{{ .RelPermalink }}">
+      {{ .Title }}
+    </a></li>
+{{ end }}
+</ul>
+
+{{ end }}
